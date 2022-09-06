@@ -1,0 +1,17 @@
+{
+  "name": "locations",
+  "package": "biskia.providers",
+  "class": "BlocksLocationsDataset",
+  "supported_tasks": [
+    "locations-to-instructions"
+  ],
+  "params": {
+    "dataset_directory_comment": "The dataset top directory is given as -d command option",
+    "splits": {
+      "train": "MNIST/locations_and_semantics/Train.json",
+      "dev": "MNIST/locations_and_semantics/Dev.json",
+      "test": "MNIST/locations_and_semantics/Test.json"
+    },
+    "vocab": "MNIST/locations/vocab.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "vanilla-transformer",
+  "package": "biskia.models.transformer",
+  "class": "VanillaTransformer",
+  "supported_tasks": [
+    "semantics-to-instructions"
+  ],
+  "params": {
+    "embedding_size": 256,
+    "hidden_size": 512,
+    "dropout": 0.1,
+    "num_heads": 4
+  }
+}

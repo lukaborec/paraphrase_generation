@@ -1,0 +1,17 @@
+{
+  "name": "semantics",
+  "package": "biskia.providers",
+  "class": "BlocksSemanticsDataset",
+  "supported_tasks": [
+    "semantics-to-instructions"
+  ],
+  "params": {
+    "dataset_directory_comment": "The dataset top directory is given as -d command option",
+    "splits": {
+      "train": "MNIST/semantics/Train.json",
+      "dev": "MNIST/semantics/Dev.json",
+      "test": "MNIST/semantics/Test.json"
+    },
+    "vocab": "MNIST/semantics/vocab.json"
+  }
+}

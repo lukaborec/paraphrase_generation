@@ -1,0 +1,16 @@
+{
+  "name": "rnn-locations-multi-predictor",
+  "package": "biskia.models.interpreter",
+  "class": "MultiLocationsPredictor",
+  "supported_tasks": [
+    "locations-prediction"
+  ],
+  "params": {
+    "hidden_size": 256,
+    "dropout": 0.5,
+    "num_blocks": 20,
+    "num_directions": 9,
+    "num_coordinates": 3,
+    "vocab_size": 658
+  }
+}

@@ -1,0 +1,4 @@
+# Ignore comet files, but not the offline or sample one
+/cometml/phisad.json
+!/cometml/offline.json
+!/cometml/sample.json

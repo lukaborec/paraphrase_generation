@@ -1,0 +1,17 @@
+{
+  "name": "lstm-from-semantics-init-step",
+  "package": "biskia.models.lstm",
+  "class": "LstmGenerator",
+  "supported_tasks": [
+    "locations-to-instructions",
+    "semantics-to-instructions"
+  ],
+  "params": {
+    "embedding_size": 512,
+    "hidden_size": 512,
+    "dropout": 0.5,
+    "use_states": false,
+    "use_mode": "init-step",
+    "use_mode_comment": "Can either be 'false', 'init-state' or 'init-step'."
+  }
+}

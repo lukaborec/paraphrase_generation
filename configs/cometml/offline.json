@@ -1,0 +1,5 @@
+{
+  "offline": true,
+  "offline_directory": null,
+  "offline_upload_command": "/usr/bin/python -m comet_ml.scripts.comet_upload <offline_directory>/<experiment_run>.zip"
+}

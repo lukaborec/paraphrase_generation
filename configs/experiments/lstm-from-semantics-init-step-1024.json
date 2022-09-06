@@ -1,0 +1,16 @@
+{
+  "name": "lstm-from-semantics-init-step-1024",
+  "tags": [
+    "semantics-to-instruction"
+  ],
+  "params": {
+    "cpu_only": false,
+    "num_epochs": 24,
+    "batch_size": 32
+  },
+  "task": "tasks/semantics-to-instructions.json",
+  "dataset": "datasets/semantics.json",
+  "model": "models/lstm-init-step-1024.json",
+  "interpreter": "interpreters/rnn-semantics-multi-predictor.json",
+  "interpreter_name": "rnn-semantics"
+}

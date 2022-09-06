@@ -1,0 +1,16 @@
+{
+  "name": "lstm-from-locations-init-step",
+  "tags": [
+    "locations-to-instruction"
+  ],
+  "params": {
+    "cpu_only": false,
+    "num_epochs": 50,
+    "batch_size": 32
+  },
+  "task": "tasks/locations-to-instructions.json",
+  "dataset": "datasets/locations.json",
+  "model": "models/lstm-init-step.json",
+  "interpreter": "interpreters/rnn-locations-multi-predictor.json",
+  "interpreter_name": "rnn-locations"
+}

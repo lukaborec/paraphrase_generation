@@ -1,0 +1,13 @@
+{
+  "name": "locations-to-instructions",
+  "input_type": "locations",
+  "output_type": "instructions",
+  "loss_coords": false,
+  "loss_interpreter": false,
+  "block_length": 0.1524,
+  "max_length": 83,
+  "vocab_size_comment": "We add here manually the start and end token, so vocab_size incl. these tokens.",
+  "vocab_size": 660,
+  "start_token": 659,
+  "end_token": 660
+}

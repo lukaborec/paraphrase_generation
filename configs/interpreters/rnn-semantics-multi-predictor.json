@@ -1,0 +1,15 @@
+{
+  "name": "rnn-semantics-multi-predictor",
+  "package": "biskia.models.interpreter",
+  "class": "MultiSemanticsPredictor",
+  "supported_tasks": [
+    "semantics-prediction"
+  ],
+  "params": {
+    "hidden_size": 256,
+    "dropout": 0.5,
+    "num_blocks": 20,
+    "num_directions": 9,
+    "vocab_size": 658
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "vanilla-transformer-from-semantics",
+  "tags": [
+    "semantics-to-instruction"
+  ],
+  "params": {
+    "cpu_only": false,
+    "num_epochs": 50,
+    "batch_size": 32
+  },
+  "task": "tasks/semantics-to-instructions.json",
+  "dataset": "datasets/semantics.json",
+  "model": "models/vanilla-transformer.json",
+  "interpreter": "interpreters/rnn-semantics-multi-predictor.json",
+  "interpreter_name": "rnn-semantics"
+}

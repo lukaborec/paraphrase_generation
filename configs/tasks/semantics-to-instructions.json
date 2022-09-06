@@ -1,0 +1,66 @@
+{
+  "name": "semantics-to-instructions",
+  "input_type": "semantics",
+  "output_type": "instructions",
+  "loss_coords": false,
+  "loss_interpreter": false,
+  "block_length": 0.1524,
+  "max_length": 83,
+  "vocab_size_comment": "We add here manually the start and end token, so vocab_size incl. these tokens.",
+  "vocab_size": 660,
+  "start_token": 659,
+  "end_token": 660,
+  "semantics_vocab":  49,
+  "encodings_to_directions": {
+    "0": "NW",
+    "1": "N",
+    "2": "NE",
+    "3": "W",
+    "4": "T",
+    "5": "E",
+    "6": "SW",
+    "7": "S",
+    "8": "SE"
+  },
+  "encodings_to_decorations": {
+    "0": "digit",
+    "1": "logo"
+  },
+  "decorations_to_encodings": {
+    "digit": 0,
+    "logo": 1
+  },
+  "directions_to_encodings": {
+    "NW": 0,
+    "N": 1,
+    "NE": 2,
+    "W": 3,
+    "T": 4,
+    "E": 5,
+    "SW": 6,
+    "S": 7,
+    "SE": 8
+  },
+  "brands_to_encodings": {
+    "adidas": 1,
+    "bmw": 2,
+    "burger king": 3,
+    "coca cola": 4,
+    "esso": 5,
+    "heineken": 6,
+    "hp": 7,
+    "mcdonalds": 8,
+    "mercedes benz": 9,
+    "nvidia": 10,
+    "pepsi": 11,
+    "shell": 12,
+    "sri": 13,
+    "starbucks": 14,
+    "stella artois": 15,
+    "target": 16,
+    "texaco": 17,
+    "toyota": 18,
+    "twitter": 19,
+    "ups": 20
+  }
+}

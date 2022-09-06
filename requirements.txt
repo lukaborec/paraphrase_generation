@@ -1,0 +1,8 @@
+numpy==1.19.1
+click~=7.1.2
+nltk~=3.5
+matplotlib==3.3.1
+setuptools==49.6.0
+torch==1.6
+seaborn==0.10.1
+comet_ml==3.2.0
