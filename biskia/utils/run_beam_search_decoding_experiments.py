@@ -166,10 +166,10 @@ for model_tuple in models:
                 equal = torch.equal(torch.tensor(predictions), semantics)
                 if equal:
                     total_correct +=1
-
+                total_paraphrases += 1
 
             json_output.append({"input":semantics, "outputs":prepared_paraphrases, "label":label})
-            total_paraphrases += 5
+
 
 
         # Write to file

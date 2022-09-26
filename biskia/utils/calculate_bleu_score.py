@@ -140,6 +140,7 @@ dataset_dir = '/Users/lukaborec/Projects/IM/060_bisk_interpreter_data/data/block
 vocab = json.loads(open(f"{dataset_dir}/MNIST/semantics/vocab.json", 'r').read())
 vocab['id_to_word']['659'] = "<sos>"
 vocab['id_to_word']['660'] = "<eos>"
+vocab['id_to_word']['0'] = "<unk>"
 
 splits = {
     'train': 'MNIST/semantics/Train.json',

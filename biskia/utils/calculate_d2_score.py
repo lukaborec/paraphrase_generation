@@ -100,8 +100,8 @@ for experiment in all_experiments:
     paraphrase_four = Counter(four_p)
     paraphrase_five = Counter(five_p)
 
-    print(f"1-gram: {len(original_one.values())} vs {len(paraphrase_one.values())}")
-    print(f"2-gram: {len(original_two.values())} vs {len(paraphrase_two.values())}")
-    print(f"3-gram: {len(original_three.values())} vs {len(paraphrase_three.values())}")
-    print(f"4-gram: {len(original_four.values())} vs {len(paraphrase_four.values())}")
+    print(f"1-gram: {len(original_one.values())} vs {len(paraphrase_one.values())}: {len(paraphrase_one.values())/len(original_one.values())}")
+    print(f"2-gram: {len(original_two.values())} vs {len(paraphrase_two.values())}: {len(paraphrase_two.values())/len(original_two.values())}")
+    print(f"3-gram: {len(original_three.values())} vs {len(paraphrase_three.values())}: {len(paraphrase_three.values())/len(original_three.values())}")
+    print(f"4-gram: {len(original_four.values())} vs {len(paraphrase_four.values())}: {len(paraphrase_four.values())/len(original_four.values())}")
     print()

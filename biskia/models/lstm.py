@@ -280,7 +280,12 @@ class LstmGenerator(nn.Module):
         start_token = torch.full(size=(len(input),), fill_value=self.start_token.item(), dtype=torch.int64,
                          device=device)
         paraphrases = []
-        while len(paraphrases) < num_paraphrases:
+
+        # Generate a stopping criterion to break the while loop
+        num_total_generated_paraphrases = 10
+        current_paraphrase_count = 0
+
+        while len(paraphrases) < num_paraphrases and current_paraphrase_count < num_total_generated_paraphrases:
             node = BeamSearchNode(hx, cx, self.end_token, start_token)
             node.output_words = []
 
@@ -300,8 +305,10 @@ class LstmGenerator(nn.Module):
                 indices_to_remove = sorted_indices[sorted_indices_to_remove]
                 output_word_logit[:, indices_to_remove] = 0
 
-                # try
-                output_word = torch.multinomial(output_word_logit, 1)[0] # becauese torch.multinomial returns a list and we only want the first element
+                try:
+                    output_word = torch.multinomial(prob, 1)[0] # because torch.multinomial returns a list and we only want the first element
+                except:  # RuntimeError: invalid multinomial distribution (sum of probabilities <= 0)
+                    output_word = sorted_indices.squeeze()[0].unsqueeze(0)
                 # except:
                 #     print("RuntimeError: probability tensor contains either `inf`, `nan` or element < 0")
                 #     # batch_outputs = torch.stack(node.output_words)
@@ -312,7 +319,15 @@ class LstmGenerator(nn.Module):
                 node.output_words.append(output_word)
 
                 if node.current_word.item() == self.end_token:
-                    paraphrases.append(node.output_words)
+                    current_paraphrase_count += 1 # Increment count
+                    # Save the paraphrase only if it hasn't been generated previously
+                    exists = False
+                    current_paraphrase = torch.cat(node.output_words)
+                    for p in paraphrases:
+                        if torch.equal(current_paraphrase, p):
+                            exists = True
+                    if not exists:
+                        paraphrases.append(torch.cat(node.output_words))
                     break
 
         # batch_outputs = torch.stack(node.output_words)
